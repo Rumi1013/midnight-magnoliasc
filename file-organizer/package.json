@@ -1,0 +1,43 @@
+{
+  "name": "midnight-magnolia-file-organizer",
+  "version": "1.0.0",
+  "description": "File organization and analysis system for Midnight Magnolia",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "scan": "node src/index.js scan",
+    "analyze": "node src/index.js analyze",
+    "organize": "node src/index.js organize",
+    "test": "jest"
+  },
+  "keywords": [
+    "file-organization",
+    "metadata",
+    "analysis",
+    "midnight-magnolia"
+  ],
+  "author": "Latisha",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "exiftool-vendored": "^22.0.0",
+    "file-type": "^18.5.0",
+    "glob": "^10.3.3",
+    "image-size": "^1.0.2",
+    "lodash": "^4.17.21",
+    "md5-file": "^5.0.0",
+    "mongoose": "^7.4.3",
+    "node-fetch": "^3.3.2",
+    "pdf-parse": "^1.1.1",
+    "progress": "^2.0.3",
+    "@notionhq/client": "^2.2.13"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "nodemon": "^3.0.1"
+  },
+  "type": "module"
+}
