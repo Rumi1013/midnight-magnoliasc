@@ -19,7 +19,7 @@
     "lucide-react": "^0.479.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.0",
-    "next": "15.2.1",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
