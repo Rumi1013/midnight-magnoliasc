@@ -1,10 +1,10 @@
-import BlogCard from "@/components/blog-card";
-import { getBlogPosts } from "@/lib/blog";
-import { siteConfig } from "@/lib/config";
-import { constructMetadata } from "@/lib/utils";
+import BlogCard from '@/components/blog-card';
+import { getBlogPosts } from '@/lib/blog';
+import { siteConfig } from '@/lib/config';
+import { constructMetadata } from '@/lib/utils';
 
 export const metadata = constructMetadata({
-  title: "Blog",
+  title: 'Blog',
   description: `Latest news and updates from ${siteConfig.name}.`,
 });
 

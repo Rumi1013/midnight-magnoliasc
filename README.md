@@ -5,7 +5,7 @@ A full-stack web application and business management system for Midnight Magnoli
 ## Project Structure
 
 - `/Midnight_Magnolia_SC/` - Main application monorepo with web app and packages
-- `/midnight-magnolia/` - Core Next.js application 
+- `/midnight-magnolia/` - Core Next.js application
 - `/file-organizer/` - File management and organization utilities
 - `/deployment/` - Deployment scripts and configurations
 
@@ -26,6 +26,7 @@ A full-stack web application and business management system for Midnight Magnoli
 ## Development
 
 This project uses:
+
 - Next.js 15
 - TypeScript
 - Tailwind CSS
@@ -33,4 +34,4 @@ This project uses:
 
 ## Deployment
 
-Deploy using the included deployment scripts or push to your preferred hosting platform. 
+Deploy using the included deployment scripts or push to your preferred hosting platform.

@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Icons } from "@/components/icons";
-import { MobileDrawer } from "@/components/mobile-drawer";
-import { buttonVariants } from "@/components/ui/button";
-import { easeInOutCubic } from "@/lib/animation";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Icons } from '@/components/icons';
+import { MobileDrawer } from '@/components/mobile-drawer';
+import { buttonVariants } from '@/components/ui/button';
+import { easeInOutCubic } from '@/lib/animation';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export function Header() {
   return (
@@ -26,8 +26,8 @@ export function Header() {
           <Link
             href="#"
             className={cn(
-              buttonVariants({ variant: "default" }),
-              "h-8 text-primary-foreground rounded-lg group tracking-tight font-medium"
+              buttonVariants({ variant: 'default' }),
+              'h-8 text-primary-foreground rounded-lg group tracking-tight font-medium'
             )}
           >
             {siteConfig.cta}

@@ -1,12 +1,12 @@
-import { siteConfig } from "@/lib/config";
-import fs from "fs";
-import path from "path";
-import rehypePrettyCode from "rehype-pretty-code";
-import rehypeStringify from "rehype-stringify";
-import remarkGfm from "remark-gfm";
-import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
-import { unified } from "unified";
+import { siteConfig } from '@/lib/config';
+import fs from 'fs';
+import path from 'path';
+import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
 export type Post = {
   title: string;
@@ -21,14 +21,14 @@ function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
   let match = frontmatterRegex.exec(fileContent);
   let frontMatterBlock = match![1];
-  let content = fileContent.replace(frontmatterRegex, "").trim();
-  let frontMatterLines = frontMatterBlock.trim().split("\n");
+  let content = fileContent.replace(frontmatterRegex, '').trim();
+  let frontMatterLines = frontMatterBlock.trim().split('\n');
   let metadata: Partial<Post> = {};
 
-  frontMatterLines.forEach((line) => {
-    let [key, ...valueArr] = line.split(": ");
-    let value = valueArr.join(": ").trim();
-    value = value.replace(/^['"](.*)['"]$/, "$1"); // Remove quotes
+  frontMatterLines.forEach(line => {
+    let [key, ...valueArr] = line.split(': ');
+    let value = valueArr.join(': ').trim();
+    value = value.replace(/^['"](.*)['"]$/, '$1'); // Remove quotes
     metadata[key.trim() as keyof Post] = value;
   });
 
@@ -36,7 +36,7 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir: string) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  return fs.readdirSync(dir).filter(file => path.extname(file) === '.mdx');
 }
 
 export async function markdownToHTML(markdown: string) {
@@ -47,8 +47,8 @@ export async function markdownToHTML(markdown: string) {
     .use(rehypePrettyCode, {
       // https://rehype-pretty.pages.dev/#usage
       theme: {
-        light: "min-light",
-        dark: "min-dark",
+        light: 'min-light',
+        dark: 'min-dark',
       },
       keepBackground: false,
     })
@@ -59,8 +59,8 @@ export async function markdownToHTML(markdown: string) {
 }
 
 export async function getPost(slug: string) {
-  const filePath = path.join("content", `${slug}.mdx`);
-  const source = fs.readFileSync(filePath, "utf-8");
+  const filePath = path.join('content', `${slug}.mdx`);
+  const source = fs.readFileSync(filePath, 'utf-8');
   const { content: rawContent, data: metadata } = parseFrontmatter(source);
   const content = await markdownToHTML(rawContent);
   const defaultImage = `${siteConfig.url}/og?title=${encodeURIComponent(
@@ -79,7 +79,7 @@ export async function getPost(slug: string) {
 async function getAllPosts(dir: string) {
   const mdxFiles = getMDXFiles(dir);
   return Promise.all(
-    mdxFiles.map(async (file) => {
+    mdxFiles.map(async file => {
       const slug = path.basename(file, path.extname(file));
       const { metadata, source } = await getPost(slug);
       return {
@@ -92,5 +92,5 @@ async function getAllPosts(dir: string) {
 }
 
 export async function getBlogPosts() {
-  return getAllPosts(path.join(process.cwd(), "content"));
+  return getAllPosts(path.join(process.cwd(), 'content'));
 }

@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { Icons } from "@/components/icons";
-import { NavMenu } from "@/components/nav-menu";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion, useScroll } from "motion/react";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Icons } from '@/components/icons';
+import { NavMenu } from '@/components/nav-menu';
+import { ThemeToggle } from '@/components/theme-toggle';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
+import { Menu, X } from 'lucide-react';
+import { AnimatePresence, motion, useScroll } from 'motion/react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-const INITIAL_WIDTH = "70rem";
-const MAX_WIDTH = "800px";
+const INITIAL_WIDTH = '70rem';
+const MAX_WIDTH = '800px';
 
 // Animation variants
 const overlayVariants = {
@@ -27,7 +27,7 @@ const drawerVariants = {
     y: 0,
     rotate: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
       damping: 15,
       stiffness: 200,
       staggerChildren: 0.03,
@@ -54,13 +54,11 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = siteConfig.nav.links.map((item) =>
-        item.href.substring(1),
-      );
+      const sections = siteConfig.nav.links.map(item => item.href.substring(1));
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -74,27 +72,27 @@ export function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    const unsubscribe = scrollY.on("change", (latest) => {
+    const unsubscribe = scrollY.on('change', latest => {
       setHasScrolled(latest > 10);
     });
     return unsubscribe;
   }, [scrollY]);
 
-  const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
+  const toggleDrawer = () => setIsDrawerOpen(prev => !prev);
   const handleOverlayClick = () => setIsDrawerOpen(false);
 
   return (
     <header
       className={cn(
-        "sticky z-50 mx-4 flex justify-center transition-all duration-300 md:mx-0",
-        hasScrolled ? "top-6" : "top-4 mx-0",
+        'sticky z-50 mx-4 flex justify-center transition-all duration-300 md:mx-0',
+        hasScrolled ? 'top-6' : 'top-4 mx-0'
       )}
     >
       <motion.div
@@ -104,10 +102,10 @@ export function Navbar() {
       >
         <div
           className={cn(
-            "mx-auto max-w-7xl rounded-2xl transition-all duration-300  xl:px-0",
+            'mx-auto max-w-7xl rounded-2xl transition-all duration-300  xl:px-0',
             hasScrolled
-              ? "px-2 border border-border backdrop-blur-lg bg-background/75"
-              : "shadow-none px-7",
+              ? 'px-2 border border-border backdrop-blur-lg bg-background/75'
+              : 'shadow-none px-7'
           )}
         >
           <div className="flex h-[56px] items-center justify-between p-4">
@@ -186,7 +184,7 @@ export function Navbar() {
                   variants={drawerMenuContainerVariants}
                 >
                   <AnimatePresence>
-                    {siteConfig.nav.links.map((item) => (
+                    {siteConfig.nav.links.map(item => (
                       <motion.li
                         key={item.id}
                         className="p-2.5 border-b border-border last:border-b-0"
@@ -194,18 +192,18 @@ export function Navbar() {
                       >
                         <a
                           href={item.href}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.preventDefault();
                             const element = document.getElementById(
-                              item.href.substring(1),
+                              item.href.substring(1)
                             );
-                            element?.scrollIntoView({ behavior: "smooth" });
+                            element?.scrollIntoView({ behavior: 'smooth' });
                             setIsDrawerOpen(false);
                           }}
                           className={`underline-offset-4 hover:text-primary/80 transition-colors ${
                             activeSection === item.href.substring(1)
-                              ? "text-primary font-medium"
-                              : "text-primary/60"
+                              ? 'text-primary font-medium'
+                              : 'text-primary/60'
                           }`}
                         >
                           {item.name}

@@ -1,11 +1,11 @@
-import { FirstBentoAnimation } from "@/components/first-bento-animation";
-import { FourthBentoAnimation } from "@/components/fourth-bento-animation";
-import { SecondBentoAnimation } from "@/components/second-bento-animation";
-import { ThirdBentoAnimation } from "@/components/third-bento-animation";
-import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { Globe } from "@/components/ui/globe";
-import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
+import { FirstBentoAnimation } from '@/components/first-bento-animation';
+import { FourthBentoAnimation } from '@/components/fourth-bento-animation';
+import { SecondBentoAnimation } from '@/components/second-bento-animation';
+import { ThirdBentoAnimation } from '@/components/third-bento-animation';
+import { FlickeringGrid } from '@/components/ui/flickering-grid';
+import { Globe } from '@/components/ui/globe';
+import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
 
 export const Highlight = ({
   children,
@@ -17,8 +17,8 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "p-1 py-0.5 font-medium dark:font-semibold text-secondary",
-        className,
+        'p-1 py-0.5 font-medium dark:font-semibold text-secondary',
+        className
       )}
     >
       {children}
@@ -29,29 +29,29 @@ export const Highlight = ({
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
-  name: "Cal AI",
-  description: "Smart scheduling powered by AI.",
-  cta: "Get Started",
-  url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+  name: 'Cal AI',
+  description: 'Smart scheduling powered by AI.',
+  cta: 'Get Started',
+  url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   keywords: [
-    "AI Calendar",
-    "Smart Scheduling",
-    "Productivity",
-    "Time Management",
+    'AI Calendar',
+    'Smart Scheduling',
+    'Productivity',
+    'Time Management',
   ],
   links: {
-    email: "support@calai.app",
-    twitter: "https://twitter.com/calaiapp",
-    discord: "https://discord.gg/calaiapp",
-    github: "https://github.com/calaiapp",
-    instagram: "https://instagram.com/calaiapp",
+    email: 'support@calai.app',
+    twitter: 'https://twitter.com/calaiapp',
+    discord: 'https://discord.gg/calaiapp',
+    github: 'https://github.com/calaiapp',
+    instagram: 'https://instagram.com/calaiapp',
   },
   nav: {
     links: [
-      { id: 1, name: "Home", href: "#hero" },
-      { id: 2, name: "How it Works", href: "#bento" },
-      { id: 3, name: "Features", href: "#features" },
-      { id: 4, name: "Pricing", href: "#pricing" },
+      { id: 1, name: 'Home', href: '#hero' },
+      { id: 2, name: 'How it Works', href: '#bento' },
+      { id: 3, name: 'Features', href: '#features' },
+      { id: 4, name: 'Pricing', href: '#pricing' },
     ],
   },
   hero: {
@@ -69,18 +69,18 @@ export const siteConfig = {
         <path d="M2.37845 10.5993L2.57045 10.4893L6.88445 12.9533C7.22435 13.1474 7.60901 13.2496 8.00045 13.2496C8.39189 13.2496 8.77656 13.1474 9.11645 12.9533L13.4305 10.4883L13.6225 10.5983C13.7374 10.6638 13.833 10.7586 13.8994 10.8731C13.9659 10.9875 14.0009 11.1175 14.0009 11.2498C14.0009 11.3821 13.9659 11.5121 13.8994 11.6265C13.833 11.7409 13.7374 11.8357 13.6225 11.9013L8.37245 14.9013C8.25915 14.966 8.13093 15 8.00045 15C7.86997 15 7.74175 14.966 7.62845 14.9013L2.37845 11.9013C2.2635 11.8357 2.16795 11.7409 2.10148 11.6265C2.03501 11.5121 2 11.3821 2 11.2498C2 11.1175 2.03501 10.9875 2.10148 10.8731C2.16795 10.7586 2.2635 10.6638 2.37845 10.5983V10.5993Z" />
       </svg>
     ),
-    badge: "Introducing custom automations",
-    title: "Meet your AI Agent Streamline your workflow",
+    badge: 'Introducing custom automations',
+    title: 'Meet your AI Agent Streamline your workflow',
     description:
-      "AI assistant designed to streamline your digital workflows and handle mundane tasks, so you can focus on what truly matters",
+      'AI assistant designed to streamline your digital workflows and handle mundane tasks, so you can focus on what truly matters',
     cta: {
       primary: {
-        text: "Try for Free",
-        href: "#",
+        text: 'Try for Free',
+        href: '#',
       },
       secondary: {
-        text: "Log in",
-        href: "#",
+        text: 'Log in',
+        href: '#',
       },
     },
   },
@@ -88,7 +88,7 @@ export const siteConfig = {
     companyLogos: [
       {
         id: 1,
-        name: "Company 1",
+        name: 'Company 1',
         logo: (
           <svg
             width="110"
@@ -110,7 +110,7 @@ export const siteConfig = {
       },
       {
         id: 2,
-        name: "Company 2",
+        name: 'Company 2',
         logo: (
           <svg
             width="113"
@@ -134,7 +134,7 @@ export const siteConfig = {
       },
       {
         id: 3,
-        name: "Company 3",
+        name: 'Company 3',
         logo: (
           <svg
             width="73"
@@ -154,7 +154,7 @@ export const siteConfig = {
       },
       {
         id: 4,
-        name: "Company 4",
+        name: 'Company 4',
         logo: (
           <svg
             width="96"
@@ -170,7 +170,7 @@ export const siteConfig = {
       },
       {
         id: 5,
-        name: "Company 5",
+        name: 'Company 5',
         logo: (
           <svg
             width="99"
@@ -190,7 +190,7 @@ export const siteConfig = {
       },
       {
         id: 6,
-        name: "Company 6",
+        name: 'Company 6',
         logo: (
           <svg
             width="132"
@@ -223,7 +223,7 @@ export const siteConfig = {
       },
       {
         id: 7,
-        name: "Company 7",
+        name: 'Company 7',
         logo: (
           <svg
             width="134"
@@ -265,7 +265,7 @@ export const siteConfig = {
       },
       {
         id: 8,
-        name: "Company 8",
+        name: 'Company 8',
         logo: (
           <svg
             width="122"
@@ -286,62 +286,62 @@ export const siteConfig = {
     ],
   },
   featureSection: {
-    title: "Simple. Seamless. Smart.",
+    title: 'Simple. Seamless. Smart.',
     description:
-      "Discover how SkyAgent transforms your commands into action in four easy steps",
+      'Discover how SkyAgent transforms your commands into action in four easy steps',
     items: [
       {
         id: 1,
-        title: "Ask Your AI Agent Directly",
+        title: 'Ask Your AI Agent Directly',
         content:
-          "Speak or type your command—let SkyAgent capture your intent. Your request instantly sets the process in motion.",
+          'Speak or type your command—let SkyAgent capture your intent. Your request instantly sets the process in motion.',
         image:
-          "https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          'https://images.unsplash.com/photo-1720371300677-ba4838fa0678?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
       {
         id: 2,
-        title: "Let SkyAgent Process It",
+        title: 'Let SkyAgent Process It',
         content:
-          "We prioritize the needs and preferences of our users in our design process.",
+          'We prioritize the needs and preferences of our users in our design process.',
         image:
-          "https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8fA%3D%3D",
+          'https://images.unsplash.com/photo-1686170287433-c95faf6d3608?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8fA%3D%3D',
       },
       {
         id: 3,
-        title: "Receive Instant, Actionable Results",
+        title: 'Receive Instant, Actionable Results',
         content:
-          "Our features seamlessly integrate with your existing systems for a smooth experience.",
+          'Our features seamlessly integrate with your existing systems for a smooth experience.',
         image:
-          "https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D",
+          'https://images.unsplash.com/photo-1720378042271-60aff1e1c538?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D',
       },
       {
         id: 4,
-        title: "Continuous Improvement",
+        title: 'Continuous Improvement',
         content:
-          "We are constantly updating and improving our features to provide the best experience.",
+          'We are constantly updating and improving our features to provide the best experience.',
         image:
-          "https://images.unsplash.com/photo-1666882990322-e7f3b8df4f75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+          'https://images.unsplash.com/photo-1666882990322-e7f3b8df4f75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
       },
     ],
   },
   bentoSection: {
-    title: "Empower Your Workflow with AI",
+    title: 'Empower Your Workflow with AI',
     description:
-      "Ask your AI Agent for real-time collaboration, seamless integrations, and actionable insights to streamline your operations.",
+      'Ask your AI Agent for real-time collaboration, seamless integrations, and actionable insights to streamline your operations.',
     items: [
       {
         id: 1,
         content: <FirstBentoAnimation />,
-        title: "Real-time AI Collaboration",
+        title: 'Real-time AI Collaboration',
         description:
-          "Experience real-time assistance. Ask your AI Agent to coordinate tasks, answer questions, and maintain team alignment.",
+          'Experience real-time assistance. Ask your AI Agent to coordinate tasks, answer questions, and maintain team alignment.',
       },
       {
         id: 2,
         content: <SecondBentoAnimation />,
-        title: "Seamless Integrations",
+        title: 'Seamless Integrations',
         description:
-          "Unite your favorite tools for effortless connectivity. Boost productivity through interconnected workflows.",
+          'Unite your favorite tools for effortless connectivity. Boost productivity through interconnected workflows.',
       },
       {
         id: 3,
@@ -353,45 +353,45 @@ export const siteConfig = {
             ]}
           />
         ),
-        title: "Instant Insight Reporting",
+        title: 'Instant Insight Reporting',
         description:
-          "Transform raw data into clear insights in seconds. Empower smarter decisions with real-time, always-learning intelligence.",
+          'Transform raw data into clear insights in seconds. Empower smarter decisions with real-time, always-learning intelligence.',
       },
       {
         id: 4,
         content: <FourthBentoAnimation once={false} />,
-        title: "Smart Automation",
+        title: 'Smart Automation',
         description:
-          "Set it, forget it. Your AI Agent tackles repetitive tasks so you can focus on strategy, innovation, and growth.",
+          'Set it, forget it. Your AI Agent tackles repetitive tasks so you can focus on strategy, innovation, and growth.',
       },
     ],
   },
   benefits: [
     {
       id: 1,
-      text: "Save hours each week with AI-optimized scheduling.",
-      image: "/Device-6.png",
+      text: 'Save hours each week with AI-optimized scheduling.',
+      image: '/Device-6.png',
     },
     {
       id: 2,
-      text: "Reduce scheduling conflicts and double-bookings.",
-      image: "/Device-7.png",
+      text: 'Reduce scheduling conflicts and double-bookings.',
+      image: '/Device-7.png',
     },
     {
       id: 3,
-      text: "Improve work-life balance with smart time allocation.",
-      image: "/Device-8.png",
+      text: 'Improve work-life balance with smart time allocation.',
+      image: '/Device-8.png',
     },
     {
       id: 4,
-      text: "Increase productivity with AI-driven time management insights.",
-      image: "/Device-1.png",
+      text: 'Increase productivity with AI-driven time management insights.',
+      image: '/Device-1.png',
     },
   ],
   growthSection: {
-    title: "Built for Secure Growth",
+    title: 'Built for Secure Growth',
     description:
-      "Where advanced security meets seamless scalability—designed to protect your data and empower your growth.",
+      'Where advanced security meets seamless scalability—designed to protect your data and empower your growth.',
     items: [
       {
         id: 1,
@@ -401,10 +401,10 @@ export const siteConfig = {
             style={{
               WebkitMaskImage: `url("data:image/svg+xml,%3Csvg width='265' height='268' viewBox='0 0 265 268' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M121.384 4.5393C124.406 1.99342 128.319 0.585938 132.374 0.585938C136.429 0.585938 140.342 1.99342 143.365 4.5393C173.074 29.6304 210.174 45.6338 249.754 50.4314C253.64 50.9018 257.221 52.6601 259.855 55.3912C262.489 58.1223 264.005 61.6477 264.13 65.3354C265.616 106.338 254.748 146.9 232.782 182.329C210.816 217.759 178.649 246.61 140.002 265.547C137.645 266.701 135.028 267.301 132.371 267.298C129.715 267.294 127.1 266.686 124.747 265.526C86.0991 246.59 53.9325 217.739 31.9665 182.309C10.0005 146.879 -0.867679 106.317 0.618784 65.3147C0.748654 61.6306 2.26627 58.1102 4.9001 55.3833C7.53394 52.6565 11.1121 50.9012 14.9945 50.4314C54.572 45.6396 91.6716 29.6435 121.384 4.56V4.5393Z' fill='black'/%3E%3C/svg%3E")`,
               maskImage: `url("data:image/svg+xml,%3Csvg width='265' height='268' viewBox='0 0 265 268' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' clipRule='evenodd' d='M121.384 4.5393C124.406 1.99342 128.319 0.585938 132.374 0.585938C136.429 0.585938 140.342 1.99342 143.365 4.5393C173.074 29.6304 210.174 45.6338 249.754 50.4314C253.64 50.9018 257.221 52.6601 259.855 55.3912C262.489 58.1223 264.005 61.6477 264.13 65.3354C265.616 106.338 254.748 146.9 232.782 182.329C210.816 217.759 178.649 246.61 140.002 265.547C137.645 266.701 135.028 267.301 132.371 267.298C129.715 267.294 127.1 266.686 124.747 265.526C86.0991 246.59 53.9325 217.739 31.9665 182.309C10.0005 146.879 -0.867679 106.317 0.618784 65.3147C0.748654 61.6306 2.26627 58.1102 4.9001 55.3833C7.53394 52.6565 11.1121 50.9012 14.9945 50.4314C54.572 45.6396 91.6716 29.6435 121.384 4.56V4.5393Z' fill='black'/%3E%3C/svg%3E")`,
-              WebkitMaskSize: "contain",
-              maskSize: "contain",
-              WebkitMaskRepeat: "no-repeat",
-              maskPosition: "center",
+              WebkitMaskSize: 'contain',
+              maskSize: 'contain',
+              WebkitMaskRepeat: 'no-repeat',
+              maskPosition: 'center',
             }}
           >
             <div className="absolute top-[55%] md:top-[58%] left-[55%] md:left-[57%] -translate-x-1/2 -translate-y-1/2  size-full z-10">
@@ -658,7 +658,7 @@ export const siteConfig = {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
               className="size-full"
             >
               <FlickeringGrid
@@ -671,9 +671,9 @@ export const siteConfig = {
           </div>
         ),
 
-        title: "Advanced Task Security",
+        title: 'Advanced Task Security',
         description:
-          "Safeguard your tasks with state-of-art encryption and secure access to your workflow data.",
+          'Safeguard your tasks with state-of-art encryption and secure access to your workflow data.',
       },
       {
         id: 2,
@@ -683,120 +683,120 @@ export const siteConfig = {
           </div>
         ),
 
-        title: "Scalable for Teams",
+        title: 'Scalable for Teams',
         description:
-          "Grow with your team. Track tasks across multiple workspaces and all team members.",
+          'Grow with your team. Track tasks across multiple workspaces and all team members.',
       },
     ],
   },
   quoteSection: {
     quote:
-      "SkyAgent has transformed our daily operations. Tasks that once consumed hours now complete in moments, freeing our team to focus on creativity and strategic growth.",
+      'SkyAgent has transformed our daily operations. Tasks that once consumed hours now complete in moments, freeing our team to focus on creativity and strategic growth.',
     author: {
-      name: "Alex Johnson",
-      role: "CTO, Innovatech",
-      image: "https://randomuser.me/api/portraits/men/91.jpg",
+      name: 'Alex Johnson',
+      role: 'CTO, Innovatech',
+      image: 'https://randomuser.me/api/portraits/men/91.jpg',
     },
   },
   pricing: {
-    title: "Pricing that scales with you",
+    title: 'Pricing that scales with you',
     description:
       "Whichever plan you pick, it's free until you love your docs. That's our promise.",
     pricingItems: [
       {
-        name: "Free",
-        href: "#",
-        price: "$0",
-        period: "month",
-        yearlyPrice: "$0",
+        name: 'Free',
+        href: '#',
+        price: '$0',
+        period: 'month',
+        yearlyPrice: '$0',
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components library",
+          'Custom domain',
+          'SEO-optimizations',
+          'Auto-generated API docs',
+          'Built-in components library',
         ],
-        description: "Perfect for individual users",
-        buttonText: "Start Free",
-        buttonColor: "bg-accent text-primary",
+        description: 'Perfect for individual users',
+        buttonText: 'Start Free',
+        buttonColor: 'bg-accent text-primary',
         isPopular: false,
       },
       {
-        name: "Startup",
-        href: "#",
-        price: "$12",
-        period: "month",
-        yearlyPrice: "$120",
+        name: 'Startup',
+        href: '#',
+        price: '$12',
+        period: 'month',
+        yearlyPrice: '$120',
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components library",
-          "E-commerce integration",
-          "User authentication system",
-          "Multi-language support",
-          "Real-time collaboration tools",
+          'Custom domain',
+          'SEO-optimizations',
+          'Auto-generated API docs',
+          'Built-in components library',
+          'E-commerce integration',
+          'User authentication system',
+          'Multi-language support',
+          'Real-time collaboration tools',
         ],
-        description: "Ideal for professionals and small teams",
-        buttonText: "Upgrade to Pro",
-        buttonColor: "bg-secondary text-white",
+        description: 'Ideal for professionals and small teams',
+        buttonText: 'Upgrade to Pro',
+        buttonColor: 'bg-secondary text-white',
         isPopular: true,
       },
       {
-        name: "Enterprise",
-        href: "#",
-        price: "$24",
-        period: "month",
-        yearlyPrice: "$240",
+        name: 'Enterprise',
+        href: '#',
+        price: '$24',
+        period: 'month',
+        yearlyPrice: '$240',
         features: [
-          "Custom domain",
-          "SEO-optimizations",
-          "Auto-generated API docs",
-          "Built-in components librarys",
-          "Real-time collaboration tools",
+          'Custom domain',
+          'SEO-optimizations',
+          'Auto-generated API docs',
+          'Built-in components librarys',
+          'Real-time collaboration tools',
         ],
-        description: "Best for large teams and enterprise-level organizations",
-        buttonText: "Contact Sales",
-        buttonColor: "bg-primary text-primary-foreground",
+        description: 'Best for large teams and enterprise-level organizations',
+        buttonText: 'Contact Sales',
+        buttonColor: 'bg-primary text-primary-foreground',
         isPopular: false,
       },
     ],
   },
   testimonials: [
     {
-      id: "1",
-      name: "Alex Rivera",
-      role: "CTO at InnovateTech",
-      img: "https://randomuser.me/api/portraits/men/91.jpg",
+      id: '1',
+      name: 'Alex Rivera',
+      role: 'CTO at InnovateTech',
+      img: 'https://randomuser.me/api/portraits/men/91.jpg',
       description: (
         <p>
           The AI-driven analytics from #QuantumInsights have revolutionized our
           product development cycle.
           <Highlight>
             Insights are now more accurate and faster than ever.
-          </Highlight>{" "}
+          </Highlight>{' '}
           A game-changer for tech companies.
         </p>
       ),
     },
     {
-      id: "2",
-      name: "Samantha Lee",
-      role: "Marketing Director at NextGen Solutions",
-      img: "https://randomuser.me/api/portraits/women/12.jpg",
+      id: '2',
+      name: 'Samantha Lee',
+      role: 'Marketing Director at NextGen Solutions',
+      img: 'https://randomuser.me/api/portraits/women/12.jpg',
       description: (
         <p>
           Implementing #AIStream&apos;s customer prediction model has
           drastically improved our targeting strategy.
-          <Highlight>Seeing a 50% increase in conversion rates!</Highlight>{" "}
+          <Highlight>Seeing a 50% increase in conversion rates!</Highlight>{' '}
           Highly recommend their solutions.
         </p>
       ),
     },
     {
-      id: "3",
-      name: "Raj Patel",
-      role: "Founder & CEO at StartUp Grid",
-      img: "https://randomuser.me/api/portraits/men/45.jpg",
+      id: '3',
+      name: 'Raj Patel',
+      role: 'Founder & CEO at StartUp Grid',
+      img: 'https://randomuser.me/api/portraits/men/45.jpg',
       description: (
         <p>
           As a startup, we need to move fast and stay ahead. #CodeAI&apos;s
@@ -807,10 +807,10 @@ export const siteConfig = {
       ),
     },
     {
-      id: "4",
-      name: "Emily Chen",
-      role: "Product Manager at Digital Wave",
-      img: "https://randomuser.me/api/portraits/women/83.jpg",
+      id: '4',
+      name: 'Emily Chen',
+      role: 'Product Manager at Digital Wave',
+      img: 'https://randomuser.me/api/portraits/women/83.jpg',
       description: (
         <p>
           #VoiceGen&apos;s AI-driven voice synthesis has made creating global
@@ -821,10 +821,10 @@ export const siteConfig = {
       ),
     },
     {
-      id: "5",
-      name: "Michael Brown",
-      role: "Data Scientist at FinTech Innovations",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
+      id: '5',
+      name: 'Michael Brown',
+      role: 'Data Scientist at FinTech Innovations',
+      img: 'https://randomuser.me/api/portraits/men/1.jpg',
       description: (
         <p>
           Leveraging #DataCrunch&apos;s AI for our financial models has given us
@@ -832,111 +832,111 @@ export const siteConfig = {
           <Highlight>
             Our investment strategies are now powered by real-time data
             analytics.
-          </Highlight>{" "}
+          </Highlight>{' '}
           Transformative for the finance industry.
         </p>
       ),
     },
     {
-      id: "6",
-      name: "Linda Wu",
-      role: "VP of Operations at LogiChain Solutions",
-      img: "https://randomuser.me/api/portraits/women/5.jpg",
+      id: '6',
+      name: 'Linda Wu',
+      role: 'VP of Operations at LogiChain Solutions',
+      img: 'https://randomuser.me/api/portraits/women/5.jpg',
       description: (
         <p>
           #LogiTech&apos;s supply chain optimization tools have drastically
           reduced our operational costs.
           <Highlight>
             Efficiency and accuracy in logistics have never been better.
-          </Highlight>{" "}
+          </Highlight>{' '}
         </p>
       ),
     },
     {
-      id: "7",
-      name: "Carlos Gomez",
-      role: "Head of R&D at EcoInnovate",
-      img: "https://randomuser.me/api/portraits/men/14.jpg",
+      id: '7',
+      name: 'Carlos Gomez',
+      role: 'Head of R&D at EcoInnovate',
+      img: 'https://randomuser.me/api/portraits/men/14.jpg',
       description: (
         <p>
           By integrating #GreenTech&apos;s sustainable energy solutions,
           we&apos;ve seen a significant reduction in carbon footprint.
           <Highlight>
             Leading the way in eco-friendly business practices.
-          </Highlight>{" "}
+          </Highlight>{' '}
           Pioneering change in the industry.
         </p>
       ),
     },
     {
-      id: "8",
-      name: "Aisha Khan",
-      role: "Chief Marketing Officer at Fashion Forward",
-      img: "https://randomuser.me/api/portraits/women/56.jpg",
+      id: '8',
+      name: 'Aisha Khan',
+      role: 'Chief Marketing Officer at Fashion Forward',
+      img: 'https://randomuser.me/api/portraits/women/56.jpg',
       description: (
         <p>
           #TrendSetter&apos;s market analysis AI has transformed how we approach
           fashion trends.
           <Highlight>
             Our campaigns are now data-driven with higher customer engagement.
-          </Highlight>{" "}
+          </Highlight>{' '}
           Revolutionizing fashion marketing.
         </p>
       ),
     },
     {
-      id: "9",
-      name: "Tom Chen",
-      role: "Director of IT at HealthTech Solutions",
-      img: "https://randomuser.me/api/portraits/men/18.jpg",
+      id: '9',
+      name: 'Tom Chen',
+      role: 'Director of IT at HealthTech Solutions',
+      img: 'https://randomuser.me/api/portraits/men/18.jpg',
       description: (
         <p>
           Implementing #MediCareAI in our patient care systems has improved
           patient outcomes significantly.
           <Highlight>
             Technology and healthcare working hand in hand for better health.
-          </Highlight>{" "}
+          </Highlight>{' '}
           A milestone in medical technology.
         </p>
       ),
     },
     {
-      id: "10",
-      name: "Sofia Patel",
-      role: "CEO at EduTech Innovations",
-      img: "https://randomuser.me/api/portraits/women/73.jpg",
+      id: '10',
+      name: 'Sofia Patel',
+      role: 'CEO at EduTech Innovations',
+      img: 'https://randomuser.me/api/portraits/women/73.jpg',
       description: (
         <p>
           #LearnSmart&apos;s AI-driven personalized learning plans have doubled
           student performance metrics.
           <Highlight>
             Education tailored to every learner&apos;s needs.
-          </Highlight>{" "}
+          </Highlight>{' '}
           Transforming the educational landscape.
         </p>
       ),
     },
     {
-      id: "11",
-      name: "Jake Morrison",
-      role: "CTO at SecureNet Tech",
-      img: "https://randomuser.me/api/portraits/men/25.jpg",
+      id: '11',
+      name: 'Jake Morrison',
+      role: 'CTO at SecureNet Tech',
+      img: 'https://randomuser.me/api/portraits/men/25.jpg',
       description: (
         <p>
           With #CyberShield&apos;s AI-powered security systems, our data
           protection levels are unmatched.
           <Highlight>
             Ensuring safety and trust in digital spaces.
-          </Highlight>{" "}
+          </Highlight>{' '}
           Redefining cybersecurity standards.
         </p>
       ),
     },
     {
-      id: "12",
-      name: "Nadia Ali",
-      role: "Product Manager at Creative Solutions",
-      img: "https://randomuser.me/api/portraits/women/78.jpg",
+      id: '12',
+      name: 'Nadia Ali',
+      role: 'Product Manager at Creative Solutions',
+      img: 'https://randomuser.me/api/portraits/women/78.jpg',
       description: (
         <p>
           #DesignPro&apos;s AI has streamlined our creative process, enhancing
@@ -947,101 +947,101 @@ export const siteConfig = {
       ),
     },
     {
-      id: "13",
-      name: "Omar Farooq",
-      role: "Founder at Startup Hub",
-      img: "https://randomuser.me/api/portraits/men/54.jpg",
+      id: '13',
+      name: 'Omar Farooq',
+      role: 'Founder at Startup Hub',
+      img: 'https://randomuser.me/api/portraits/men/54.jpg',
       description: (
         <p>
           #VentureAI&apos;s insights into startup ecosystems have been
           invaluable for our growth and funding strategies.
           <Highlight>
             Empowering startups with data-driven decisions.
-          </Highlight>{" "}
+          </Highlight>{' '}
           A catalyst for startup success.
         </p>
       ),
     },
   ],
   faqSection: {
-    title: "Frequently Asked Questions",
+    title: 'Frequently Asked Questions',
     description:
       "Answers to common questions about SkyAgent and its features. If you have any other questions, please don't hesitate to contact us.",
     faQitems: [
       {
         id: 1,
-        question: "What is an AI Agent?",
+        question: 'What is an AI Agent?',
         answer:
-          "An AI Agent is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals. It combines artificial intelligence and machine learning to provide personalized assistance and automation.",
+          'An AI Agent is an intelligent software program that can perform tasks autonomously, learn from interactions, and make decisions to help achieve specific goals. It combines artificial intelligence and machine learning to provide personalized assistance and automation.',
       },
       {
         id: 2,
-        question: "How does SkyAgent work?",
+        question: 'How does SkyAgent work?',
         answer:
-          "SkyAgent works by analyzing your requirements, leveraging advanced AI algorithms to understand context, and executing tasks based on your instructions. It can integrate with your workflow, learn from feedback, and continuously improve its performance.",
+          'SkyAgent works by analyzing your requirements, leveraging advanced AI algorithms to understand context, and executing tasks based on your instructions. It can integrate with your workflow, learn from feedback, and continuously improve its performance.',
       },
       {
         id: 3,
-        question: "How secure is my data?",
+        question: 'How secure is my data?',
         answer:
-          "We implement enterprise-grade security measures including end-to-end encryption, secure data centers, and regular security audits. Your data is protected according to industry best practices and compliance standards.",
+          'We implement enterprise-grade security measures including end-to-end encryption, secure data centers, and regular security audits. Your data is protected according to industry best practices and compliance standards.',
       },
       {
         id: 4,
-        question: "Can I integrate my existing tools?",
+        question: 'Can I integrate my existing tools?',
         answer:
-          "Yes, SkyAgent is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.",
+          'Yes, SkyAgent is designed to be highly compatible with popular tools and platforms. We offer APIs and pre-built integrations for seamless connection with your existing workflow tools and systems.',
       },
       {
         id: 5,
-        question: "Is there a free trial available?",
+        question: 'Is there a free trial available?',
         answer:
-          "Yes, we offer a 14-day free trial that gives you full access to all features. No credit card is required to start your trial, and you can upgrade or cancel at any time.",
+          'Yes, we offer a 14-day free trial that gives you full access to all features. No credit card is required to start your trial, and you can upgrade or cancel at any time.',
       },
       {
         id: 6,
-        question: "How does SkyAgent save me time?",
+        question: 'How does SkyAgent save me time?',
         answer:
-          "SkyAgent automates repetitive tasks, streamlines workflows, and provides quick solutions to common challenges. This automation and efficiency can save hours of manual work, allowing you to focus on more strategic activities.",
+          'SkyAgent automates repetitive tasks, streamlines workflows, and provides quick solutions to common challenges. This automation and efficiency can save hours of manual work, allowing you to focus on more strategic activities.',
       },
     ],
   },
   ctaSection: {
-    id: "cta",
-    title: "Automate. Simplify. Thrive",
-    backgroundImage: "/agent-cta-background.png",
+    id: 'cta',
+    title: 'Automate. Simplify. Thrive',
+    backgroundImage: '/agent-cta-background.png',
     button: {
-      text: "Start Your 30-Day Free Trial Today",
-      href: "#",
+      text: 'Start Your 30-Day Free Trial Today',
+      href: '#',
     },
-    subtext: "Cancel anytime, no questions asked",
+    subtext: 'Cancel anytime, no questions asked',
   },
   footerLinks: [
     {
-      title: "Company",
+      title: 'Company',
       links: [
-        { id: 1, title: "About", url: "#" },
-        { id: 2, title: "Contact", url: "#" },
-        { id: 3, title: "Blog", url: "#" },
-        { id: 4, title: "Story", url: "#" },
+        { id: 1, title: 'About', url: '#' },
+        { id: 2, title: 'Contact', url: '#' },
+        { id: 3, title: 'Blog', url: '#' },
+        { id: 4, title: 'Story', url: '#' },
       ],
     },
     {
-      title: "Products",
+      title: 'Products',
       links: [
-        { id: 5, title: "Company", url: "#" },
-        { id: 6, title: "Product", url: "#" },
-        { id: 7, title: "Press", url: "#" },
-        { id: 8, title: "More", url: "#" },
+        { id: 5, title: 'Company', url: '#' },
+        { id: 6, title: 'Product', url: '#' },
+        { id: 7, title: 'Press', url: '#' },
+        { id: 8, title: 'More', url: '#' },
       ],
     },
     {
-      title: "Resources",
+      title: 'Resources',
       links: [
-        { id: 9, title: "Press", url: "#" },
-        { id: 10, title: "Careers", url: "#" },
-        { id: 11, title: "Newsletters", url: "#" },
-        { id: 12, title: "More", url: "#" },
+        { id: 9, title: 'Press', url: '#' },
+        { id: 10, title: 'Careers', url: '#' },
+        { id: 11, title: 'Newsletters', url: '#' },
+        { id: 12, title: 'More', url: '#' },
       ],
     },
   ],

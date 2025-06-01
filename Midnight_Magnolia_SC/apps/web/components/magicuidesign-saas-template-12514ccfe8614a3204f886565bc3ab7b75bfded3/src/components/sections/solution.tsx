@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import FlickeringGrid from "@/components/magicui/flickering-grid";
-import Ripple from "@/components/magicui/ripple";
-import Safari from "@/components/safari";
-import Section from "@/components/section";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import FlickeringGrid from '@/components/magicui/flickering-grid';
+import Ripple from '@/components/magicui/ripple';
+import Safari from '@/components/safari';
+import Section from '@/components/section';
+import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 const features = [
   {
-    title: "Advanced AI Algorithms",
+    title: 'Advanced AI Algorithms',
     description:
-      "Our platform utilizes cutting-edge AI algorithms to provide accurate and efficient solutions for your business needs.",
-    className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
+      'Our platform utilizes cutting-edge AI algorithms to provide accurate and efficient solutions for your business needs.',
+    className: 'hover:bg-red-500/10 transition-all duration-500 ease-out',
     content: (
       <>
         <Safari
@@ -24,11 +24,11 @@ const features = [
     ),
   },
   {
-    title: "Secure Data Handling",
+    title: 'Secure Data Handling',
     description:
-      "We prioritize your data security with state-of-the-art encryption and strict privacy protocols, ensuring your information remains confidential.",
+      'We prioritize your data security with state-of-the-art encryption and strict privacy protocols, ensuring your information remains confidential.',
     className:
-      "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
+      'order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out',
     content: (
       <Safari
         src={`/dashboard.png`}
@@ -38,11 +38,11 @@ const features = [
     ),
   },
   {
-    title: "Seamless Integration",
+    title: 'Seamless Integration',
     description:
-      "Easily integrate our AI solutions into your existing workflows and systems for a smooth and efficient operation.",
+      'Easily integrate our AI solutions into your existing workflows and systems for a smooth and efficient operation.',
     className:
-      "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
+      'md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out',
     content: (
       <>
         <FlickeringGrid
@@ -64,11 +64,11 @@ const features = [
     ),
   },
   {
-    title: "Customizable Solutions",
+    title: 'Customizable Solutions',
     description:
-      "Tailor our AI services to your specific needs with flexible customization options, allowing you to get the most out of our platform.",
+      'Tailor our AI services to your specific needs with flexible customization options, allowing you to get the most out of our platform.',
     className:
-      "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
+      'flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out',
     content: (
       <>
         <Ripple className="absolute -bottom-full" />
@@ -95,14 +95,14 @@ export default function Component() {
           <motion.div
             key={index}
             className={cn(
-              "group relative items-start overflow-hidden bg-neutral-50 dark:bg-neutral-800 p-6 rounded-2xl",
+              'group relative items-start overflow-hidden bg-neutral-50 dark:bg-neutral-800 p-6 rounded-2xl',
               feature.className
             )}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
-              type: "spring",
+              type: 'spring',
               stiffness: 100,
               damping: 30,
               delay: index * 0.1,

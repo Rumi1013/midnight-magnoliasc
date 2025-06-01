@@ -1,6 +1,6 @@
-import { FeatureSelector } from "@/components/feature-selector";
-import { Section } from "@/components/section";
-import { codeToHtml } from "shiki";
+import { FeatureSelector } from '@/components/feature-selector';
+import { Section } from '@/components/section';
+import { codeToHtml } from 'shiki';
 
 interface FeatureOption {
   id: number;
@@ -12,8 +12,8 @@ interface FeatureOption {
 const featureOptions: FeatureOption[] = [
   {
     id: 1,
-    title: "Simple Agent Workflow",
-    description: "Create a basic AI agent workflow with multiple agents.",
+    title: 'Simple Agent Workflow',
+    description: 'Create a basic AI agent workflow with multiple agents.',
     code: `import { Swarm, Agent } from 'ai-agent-sdk';
 
 const client = new Swarm();
@@ -45,9 +45,9 @@ run();`,
   },
   {
     id: 2,
-    title: "Multi-Agent Collaboration",
+    title: 'Multi-Agent Collaboration',
     description:
-      "Set up multiple AI agents to work together on a complex task.",
+      'Set up multiple AI agents to work together on a complex task.',
     code: `import { Agent, MultiAgentSystem } from 'ai-agent-sdk';
 
 const researchAgent = new Agent('Researcher');
@@ -82,8 +82,8 @@ runResearch();`,
   },
   {
     id: 3,
-    title: "Tool Integration",
-    description: "Integrate external tools and APIs into an AI agent workflow.",
+    title: 'Tool Integration',
+    description: 'Integrate external tools and APIs into an AI agent workflow.',
     code: `import { Agent, Tool } from 'ai-agent-sdk';
 import { Configuration, OpenAIApi } from 'openai';
 
@@ -128,9 +128,9 @@ performResearch('AI advancements in 2023');`,
   },
   {
     id: 4,
-    title: "Customizable Agent Behavior",
+    title: 'Customizable Agent Behavior',
     description:
-      "Design a specialized AI agent with custom decision-making logic.",
+      'Design a specialized AI agent with custom decision-making logic.',
     code: `import { Agent, KnowledgeBase } from 'ai-agent-sdk';
 
 class CustomerSupportAgent extends Agent {
@@ -188,11 +188,11 @@ handleCustomerQuery("How do I reset my password?");`,
 
 export async function Examples() {
   const features = await Promise.all(
-    featureOptions.map(async (feature) => ({
+    featureOptions.map(async feature => ({
       ...feature,
       code: await codeToHtml(feature.code, {
-        lang: "typescript",
-        theme: "github-dark",
+        lang: 'typescript',
+        theme: 'github-dark',
       }),
     }))
   );

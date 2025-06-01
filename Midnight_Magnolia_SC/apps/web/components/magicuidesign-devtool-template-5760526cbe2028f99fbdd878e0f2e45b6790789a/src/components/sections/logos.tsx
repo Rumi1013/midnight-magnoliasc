@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import { Section } from "@/components/section";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Section } from '@/components/section';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const companies = [
-  "Google",
-  "Microsoft",
-  "Amazon",
-  "Netflix",
-  "YouTube",
-  "Instagram",
+  'Google',
+  'Microsoft',
+  'Amazon',
+  'Netflix',
+  'YouTube',
+  'Instagram',
 ];
 
-const companies2 = ["Spotify", "Dropbox", "Tinder", "Slack", "Zoom", "Shopify"];
+const companies2 = ['Spotify', 'Dropbox', 'Tinder', 'Slack', 'Zoom', 'Shopify'];
 
 export function Logos() {
   const [currentSet, setCurrentSet] = useState(companies);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSet((prev) => (prev === companies ? companies2 : companies));
+      setCurrentSet(prev => (prev === companies ? companies2 : companies));
     }, 5000);
 
     return () => clearInterval(interval);
@@ -44,7 +44,7 @@ export function Logos() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{
                     duration: 0.5,
-                    ease: "easeInOut",
+                    ease: 'easeInOut',
                     delay: Math.random() * 0.5,
                   }}
                 >

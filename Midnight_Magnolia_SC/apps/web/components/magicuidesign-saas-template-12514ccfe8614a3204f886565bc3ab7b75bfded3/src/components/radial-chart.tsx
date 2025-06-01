@@ -1,25 +1,25 @@
-"use client";
+'use client';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { ChartConfig, ChartContainer } from "@/components/ui/chart";
+import { Card, CardContent } from '@/components/ui/card';
+import { ChartConfig, ChartContainer } from '@/components/ui/chart';
 import {
   Label,
   PolarGrid,
   PolarRadiusAxis,
   RadialBar,
   RadialBarChart,
-} from "recharts";
+} from 'recharts';
 const chartData = [
-  { browser: "safari", visitors: 1260, fill: "var(--color-safari)" },
+  { browser: 'safari', visitors: 1260, fill: 'var(--color-safari)' },
 ];
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: 'Visitors',
   },
   safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-1))",
+    label: 'Safari',
+    color: 'hsl(var(--chart-1))',
   },
 } satisfies ChartConfig;
 
@@ -50,7 +50,7 @@ export default function Component() {
               <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
                 <Label
                   content={({ viewBox }) => {
-                    if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                    if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
                       return (
                         <text
                           x={viewBox.cx}

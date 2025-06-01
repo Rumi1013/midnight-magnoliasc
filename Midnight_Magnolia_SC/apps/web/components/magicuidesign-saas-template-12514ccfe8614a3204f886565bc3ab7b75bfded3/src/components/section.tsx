@@ -15,7 +15,7 @@ export default function Section({
   children,
   className,
 }: SectionProps) {
-  const sectionId = title ? title.toLowerCase().replace(/\s+/g, "-") : id;
+  const sectionId = title ? title.toLowerCase().replace(/\s+/g, '-') : id;
   return (
     <section id={id || sectionId}>
       <div className={className}>

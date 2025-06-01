@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
-import { Icons } from "@/components/icons";
-import { Section } from "@/components/section";
-import { BorderText } from "@/components/ui/border-number";
-import Link from "next/link";
+import { Icons } from '@/components/icons';
+import { Section } from '@/components/section';
+import { BorderText } from '@/components/ui/border-number';
+import Link from 'next/link';
 
 const stats = [
   {
-    title: "10K+",
-    subtitle: "Stars on GitHub",
+    title: '10K+',
+    subtitle: 'Stars on GitHub',
     icon: <Icons.github className="h-5 w-5" />,
   },
   {
-    title: "50K+",
-    subtitle: "Discord Members",
+    title: '50K+',
+    subtitle: 'Discord Members',
     icon: <Icons.discord className="h-5 w-5" />,
   },
   {
-    title: "1M+",
-    subtitle: "Downloads",
+    title: '1M+',
+    subtitle: 'Downloads',
     icon: <Icons.npm className="h-5 w-5" />,
   },
 ];
@@ -30,7 +30,7 @@ export function Statistics() {
         className="border-x border-t"
         style={{
           backgroundImage:
-            "radial-gradient(circle at bottom center, hsl(var(--secondary) / 0.4), hsl(var(--background)))",
+            'radial-gradient(circle at bottom center, hsl(var(--secondary) / 0.4), hsl(var(--background)))',
         }}
       >
         <div className="grid grid-cols-1 sm:grid-cols-3">

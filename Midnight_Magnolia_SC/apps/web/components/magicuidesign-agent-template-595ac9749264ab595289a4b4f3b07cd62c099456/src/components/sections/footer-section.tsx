@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { Icons } from "@/components/icons";
-import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { siteConfig } from "@/lib/config";
-import { ChevronRightIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+import { Icons } from '@/components/icons';
+import { FlickeringGrid } from '@/components/ui/flickering-grid';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { siteConfig } from '@/lib/config';
+import { ChevronRightIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 export function FooterSection() {
-  const tablet = useMediaQuery("(max-width: 1024px)");
+  const tablet = useMediaQuery('(max-width: 1024px)');
 
   return (
     <footer id="footer" className="w-full pb-0">
@@ -38,7 +38,7 @@ export function FooterSection() {
                 <li className="mb-2 text-sm font-semibold text-primary">
                   {column.title}
                 </li>
-                {column.links.map((link) => (
+                {column.links.map(link => (
                   <li
                     key={link.id}
                     className="group inline-flex cursor-pointer items-center justify-start gap-1 text-[15px]/snug text-muted-foreground"
@@ -58,7 +58,7 @@ export function FooterSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-background z-10 from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "SkyAgent" : "Streamline your workflow"}
+            text={tablet ? 'SkyAgent' : 'Streamline your workflow'}
             fontSize={tablet ? 70 : 90}
             className="h-full w-full"
             squareSize={2}

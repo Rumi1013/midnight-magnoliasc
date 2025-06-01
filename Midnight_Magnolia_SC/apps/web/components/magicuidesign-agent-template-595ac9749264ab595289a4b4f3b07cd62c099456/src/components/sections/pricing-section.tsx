@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { SectionHeader } from "@/components/section-header";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
-import { motion } from "motion/react";
-import { useState } from "react";
+import { SectionHeader } from '@/components/section-header';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
+import { useState } from 'react';
 
 interface TabsProps {
-  activeTab: "yearly" | "monthly";
-  setActiveTab: (tab: "yearly" | "monthly") => void;
+  activeTab: 'yearly' | 'monthly';
+  setActiveTab: (tab: 'yearly' | 'monthly') => void;
   className?: string;
 }
 
@@ -16,19 +16,19 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
   return (
     <div
       className={cn(
-        "relative flex w-fit items-center rounded-full border p-0.5 backdrop-blur-sm cursor-pointer h-9 flex-row bg-muted",
-        className,
+        'relative flex w-fit items-center rounded-full border p-0.5 backdrop-blur-sm cursor-pointer h-9 flex-row bg-muted',
+        className
       )}
     >
-      {["monthly", "yearly"].map((tab) => (
+      {['monthly', 'yearly'].map(tab => (
         <button
           key={tab}
-          onClick={() => setActiveTab(tab as "yearly" | "monthly")}
+          onClick={() => setActiveTab(tab as 'yearly' | 'monthly')}
           className={cn(
-            "relative z-[1] px-2 h-8 flex items-center justify-center cursor-pointer",
+            'relative z-[1] px-2 h-8 flex items-center justify-center cursor-pointer',
             {
-              "z-0": activeTab === tab,
-            },
+              'z-0': activeTab === tab,
+            }
           )}
         >
           {activeTab === tab && (
@@ -37,7 +37,7 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
               className="absolute inset-0 rounded-full bg-white dark:bg-[#3F3F46]  shadow-md border border-border"
               transition={{
                 duration: 0.2,
-                type: "spring",
+                type: 'spring',
                 stiffness: 300,
                 damping: 25,
                 velocity: 2,
@@ -46,12 +46,12 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
           )}
           <span
             className={cn(
-              "relative block text-sm font-medium duration-200 shrink-0",
-              activeTab === tab ? "text-primary" : "text-muted-foreground",
+              'relative block text-sm font-medium duration-200 shrink-0',
+              activeTab === tab ? 'text-primary' : 'text-muted-foreground'
             )}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            {tab === "yearly" && (
+            {tab === 'yearly' && (
               <span className="ml-2 text-xs font-semibold text-secondary bg-secondary/15 py-0.5 w-[calc(100%+1rem)] px-1 rounded-full">
                 -20%
               </span>
@@ -64,8 +64,8 @@ function PricingTabs({ activeTab, setActiveTab, className }: TabsProps) {
 }
 
 export function PricingSection() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
-    "monthly",
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly'
   );
 
   // Update price animation
@@ -74,7 +74,7 @@ export function PricingSection() {
   }: {
     tier: (typeof siteConfig.pricing.pricingItems)[0];
   }) => {
-    const price = billingCycle === "yearly" ? tier.yearlyPrice : tier.price;
+    const price = billingCycle === 'yearly' ? tier.yearlyPrice : tier.price;
 
     return (
       <motion.span
@@ -82,10 +82,10 @@ export function PricingSection() {
         className="text-4xl font-semibold"
         initial={{
           opacity: 0,
-          x: billingCycle === "yearly" ? -10 : 10,
-          filter: "blur(5px)",
+          x: billingCycle === 'yearly' ? -10 : 10,
+          filter: 'blur(5px)',
         }}
-        animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+        animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
         transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
       >
         {price}
@@ -116,14 +116,14 @@ export function PricingSection() {
         </div>
 
         <div className="grid min-[650px]:grid-cols-2 min-[900px]:grid-cols-3 gap-4 w-full max-w-6xl mx-auto px-6">
-          {siteConfig.pricing.pricingItems.map((tier) => (
+          {siteConfig.pricing.pricingItems.map(tier => (
             <div
               key={tier.name}
               className={cn(
-                "rounded-xl grid grid-rows-[180px_auto_1fr] relative h-fit min-[650px]:h-full min-[900px]:h-fit",
+                'rounded-xl grid grid-rows-[180px_auto_1fr] relative h-fit min-[650px]:h-full min-[900px]:h-fit',
                 tier.isPopular
-                  ? "md:shadow-[0px_61px_24px_-10px_rgba(0,0,0,0.01),0px_34px_20px_-8px_rgba(0,0,0,0.05),0px_15px_15px_-6px_rgba(0,0,0,0.09),0px_4px_8px_-2px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(0,0,0,0.08)] bg-accent"
-                  : "bg-[#F3F4F6] dark:bg-[#F9FAFB]/[0.02] border border-border",
+                  ? 'md:shadow-[0px_61px_24px_-10px_rgba(0,0,0,0.01),0px_34px_20px_-8px_rgba(0,0,0,0.05),0px_15px_15px_-6px_rgba(0,0,0,0.09),0px_4px_8px_-2px_rgba(0,0,0,0.10),0px_0px_0px_1px_rgba(0,0,0,0.08)] bg-accent'
+                  : 'bg-[#F3F4F6] dark:bg-[#F9FAFB]/[0.02] border border-border'
               )}
             >
               <div className="flex flex-col gap-4 p-4">
@@ -138,7 +138,7 @@ export function PricingSection() {
                 <div className="flex items-baseline mt-2">
                   <PriceDisplay tier={tier} />
                   <span className="ml-2">
-                    /{billingCycle === "yearly" ? "year" : "month"}
+                    /{billingCycle === 'yearly' ? 'year' : 'month'}
                   </span>
                 </div>
                 <p className="text-sm mt-2">{tier.description}</p>
@@ -157,19 +157,19 @@ export function PricingSection() {
               </div>
               <hr className="border-border dark:border-white/20" />
               <div className="p-4">
-                {tier.name !== "Basic" && (
+                {tier.name !== 'Basic' && (
                   <p className="text-sm mb-4">
-                    Everything in {tier.name === "Pro" ? "Basic" : "Pro"} +
+                    Everything in {tier.name === 'Pro' ? 'Basic' : 'Pro'} +
                   </p>
                 )}
                 <ul className="space-y-3">
-                  {tier.features.map((feature) => (
+                  {tier.features.map(feature => (
                     <li key={feature} className="flex items-center gap-2">
                       <div
                         className={cn(
-                          "size-5 rounded-full border border-primary/20 flex items-center justify-center",
+                          'size-5 rounded-full border border-primary/20 flex items-center justify-center',
                           tier.isPopular &&
-                            "bg-muted-foreground/40 border-border",
+                            'bg-muted-foreground/40 border-border'
                         )}
                       >
                         <div className="size-3 flex items-center justify-center">

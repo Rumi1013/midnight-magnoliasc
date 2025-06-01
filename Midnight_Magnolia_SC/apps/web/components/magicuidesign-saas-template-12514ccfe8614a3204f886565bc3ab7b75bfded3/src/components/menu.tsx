@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import * as React from "react";
+import Link from 'next/link';
+import * as React from 'react';
 
 import {
   NavigationMenu,
@@ -11,9 +11,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/navigation-menu';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
 
 export default function NavigationMenuDemo() {
   return (
@@ -28,8 +28,8 @@ export default function NavigationMenuDemo() {
                   <ul
                     className={`grid gap-3 p-6 ${
                       item.content.main
-                        ? "md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]"
-                        : "w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]"
+                        ? 'md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'
+                        : 'w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]'
                     }`}
                   >
                     {item.content.main && (
@@ -65,7 +65,7 @@ export default function NavigationMenuDemo() {
               </>
             ) : (
               <Link
-                href={item.href || ""}
+                href={item.href || ''}
                 target="_arya"
                 legacyBehavior
                 passHref
@@ -83,8 +83,8 @@ export default function NavigationMenuDemo() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
@@ -92,7 +92,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
             className
           )}
           {...props}
@@ -107,4 +107,4 @@ const ListItem = React.forwardRef<
   );
 });
 
-ListItem.displayName = "ListItem";
+ListItem.displayName = 'ListItem';

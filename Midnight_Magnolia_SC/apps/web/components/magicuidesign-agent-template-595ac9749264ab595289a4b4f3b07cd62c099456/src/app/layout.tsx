@@ -1,22 +1,22 @@
-import { Navbar } from "@/components/sections/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { siteConfig } from "@/lib/site";
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Navbar } from '@/components/sections/navbar';
+import { ThemeProvider } from '@/components/theme-provider';
+import { siteConfig } from '@/lib/site';
+import type { Metadata, Viewport } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const viewport: Viewport = {
-  themeColor: "black",
+  themeColor: 'black',
 };
 
 export const metadata: Metadata = {

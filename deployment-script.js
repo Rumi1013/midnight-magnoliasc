@@ -1,6 +1,6 @@
 /**
  * Midnight Magnolia Deployment Script
- * 
+ *
  * This script creates a complete deployment package for the Midnight Magnolia project.
  * It generates all necessary files and directories, then packages them into a ZIP archive.
  */
@@ -574,7 +574,7 @@ export function CardContent({ children, className = '' }) {
       {children}
     </button>
   );
-}`
+}`,
 };
 
 /**
@@ -587,11 +587,11 @@ export function CardContent({ children, className = '' }) {
  */
 async function createDeploymentPackage() {
   console.log('🌙 Creating Midnight Magnolia complete deployment archive...');
-  
+
   try {
     // Create deployment directory
     const baseDir = 'midnight-magnolia-deployment';
-    
+
     // Create directory structure
     const directories = [
       'app',
@@ -621,7 +621,7 @@ async function createDeploymentPackage() {
       'public',
       'public/images',
       'styles',
-      'deployment'
+      'deployment',
     ];
 
     // Create base directory
@@ -645,26 +645,33 @@ async function createDeploymentPackage() {
     });
 
     // Create the zip archive
-    const output = fs.createWriteStream('midnight-magnolia-complete-v1.0.0.zip');
+    const output = fs.createWriteStream(
+      'midnight-magnolia-complete-v1.0.0.zip'
+    );
     const archive = archiver('zip', { zlib: { level: 9 } });
 
     output.on('close', () => {
-      console.log(`\n✅ Archive created: midnight-magnolia-complete-v1.0.0.zip`);
-      console.log(`📦 Total size: ${(archive.pointer() / 1024 / 1024).toFixed(2)} MB`);
-      console.log(`\n🌙 Your sacred digital sanctuary is ready for deployment!`);
-      
+      console.log(
+        `\n✅ Archive created: midnight-magnolia-complete-v1.0.0.zip`
+      );
+      console.log(
+        `📦 Total size: ${(archive.pointer() / 1024 / 1024).toFixed(2)} MB`
+      );
+      console.log(
+        `\n🌙 Your sacred digital sanctuary is ready for deployment!`
+      );
+
       // Clean up
       fs.rmSync(baseDir, { recursive: true, force: true });
     });
 
-    archive.on('error', (err) => {
+    archive.on('error', err => {
       throw err;
     });
 
     archive.pipe(output);
     archive.directory(baseDir, false);
     await archive.finalize();
-    
   } catch (error) {
     console.error('❌ Error creating archive:', error);
   }

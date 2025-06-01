@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
-import { codeToHtml } from "shiki";
+import { cn } from '@/lib/utils';
+import React, { useEffect, useState } from 'react';
+import { codeToHtml } from 'shiki';
 
 export type CodeBlockProps = {
   children?: React.ReactNode;
@@ -13,8 +13,8 @@ function CodeBlock({ children, className, ...props }: CodeBlockProps) {
   return (
     <div
       className={cn(
-        "not-prose flex w-full flex-col overflow-clip border",
-        "border-border bg-card text-card-foreground rounded-xl",
+        'not-prose flex w-full flex-col overflow-clip border',
+        'border-border bg-card text-card-foreground rounded-xl',
         className
       )}
       {...props}
@@ -33,8 +33,8 @@ export type CodeBlockCodeProps = {
 
 function CodeBlockCode({
   code,
-  language = "tsx",
-  theme = "github-light",
+  language = 'tsx',
+  theme = 'github-light',
   className,
   ...props
 }: CodeBlockCodeProps) {
@@ -49,7 +49,7 @@ function CodeBlockCode({
   }, [code, language, theme]);
 
   const classNames = cn(
-    "w-full overflow-x-auto text-[13px] [&>pre]:px-4 [&>pre]:py-4",
+    'w-full overflow-x-auto text-[13px] [&>pre]:px-4 [&>pre]:py-4',
     className
   );
 
@@ -78,7 +78,7 @@ function CodeBlockGroup({
 }: CodeBlockGroupProps) {
   return (
     <div
-      className={cn("flex items-center justify-between", className)}
+      className={cn('flex items-center justify-between', className)}
       {...props}
     >
       {children}

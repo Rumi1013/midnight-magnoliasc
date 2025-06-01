@@ -1,12 +1,12 @@
-import Author from "@/components/blog-author";
-import CtaSection from "@/components/sections/cta";
-import { getPost } from "@/lib/blog";
-import { siteConfig } from "@/lib/config";
-import { formatDate } from "@/lib/utils";
-import type { Metadata } from "next";
-import Image from "next/image";
-import { notFound } from "next/navigation";
-import { Suspense } from "react";
+import Author from '@/components/blog-author';
+import CtaSection from '@/components/sections/cta';
+import { getPost } from '@/lib/blog';
+import { siteConfig } from '@/lib/config';
+import { formatDate } from '@/lib/utils';
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 
 export async function generateMetadata({
   params,
@@ -29,7 +29,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      type: "article",
+      type: 'article',
       publishedTime,
       url: `${siteConfig.url}/blog/${post.slug}`,
       images: [
@@ -39,7 +39,7 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [image],
@@ -65,8 +65,8 @@ export default async function Blog({
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
@@ -76,7 +76,7 @@ export default async function Blog({
               : `${siteConfig.url}/blog/${post.slug}/opengraph-image`,
             url: `${siteConfig.url}/blog/${post.slug}`,
             author: {
-              "@type": "Person",
+              '@type': 'Person',
               name: siteConfig.name,
             },
           }),
@@ -121,7 +121,7 @@ export default async function Blog({
           <Author
             twitterUsername={post.metadata.author}
             name={post.metadata.author}
-            image={"/author.jpg"}
+            image={'/author.jpg'}
           />
         </div>
         <article

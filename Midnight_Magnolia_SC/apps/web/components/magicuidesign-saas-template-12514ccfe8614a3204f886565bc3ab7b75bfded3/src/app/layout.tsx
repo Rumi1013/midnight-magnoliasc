@@ -1,17 +1,17 @@
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { cn, constructMetadata } from "@/lib/utils";
-import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import { TailwindIndicator } from '@/components/tailwind-indicator';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeToggle } from '@/components/theme-toggle';
+import { cn, constructMetadata } from '@/lib/utils';
+import type { Metadata, Viewport } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = constructMetadata({});
 
 export const viewport: Viewport = {
-  colorScheme: "light",
+  colorScheme: 'light',
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth"
+          'min-h-screen bg-background antialiased w-full mx-auto scroll-smooth'
         )}
       >
         <ThemeProvider

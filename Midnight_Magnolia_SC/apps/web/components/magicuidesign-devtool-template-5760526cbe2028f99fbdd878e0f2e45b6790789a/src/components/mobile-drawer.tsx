@@ -1,5 +1,5 @@
-import { Icons } from "@/components/icons";
-import { buttonVariants } from "@/components/ui/button";
+import { Icons } from '@/components/icons';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Drawer,
   DrawerContent,
@@ -8,11 +8,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { IoMenuSharp } from "react-icons/io5";
+} from '@/components/ui/drawer';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { IoMenuSharp } from 'react-icons/io5';
 
 export function MobileDrawer() {
   return (
@@ -36,8 +36,8 @@ export function MobileDrawer() {
           <Link
             href="#"
             className={cn(
-              buttonVariants({ variant: "default" }),
-              "text-white rounded-full group"
+              buttonVariants({ variant: 'default' }),
+              'text-white rounded-full group'
             )}
           >
             {siteConfig.cta}

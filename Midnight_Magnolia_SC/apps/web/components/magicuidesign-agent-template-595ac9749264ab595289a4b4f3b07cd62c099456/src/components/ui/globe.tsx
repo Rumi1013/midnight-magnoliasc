@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import createGlobe, { COBEOptions } from "cobe";
-import { useMotionValue, useSpring } from "motion/react";
-import { useEffect, useRef, useMemo } from "react";
-import { useTheme } from "next-themes";
+import createGlobe, { COBEOptions } from 'cobe';
+import { useMotionValue, useSpring } from 'motion/react';
+import { useEffect, useRef, useMemo } from 'react';
+import { useTheme } from 'next-themes';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 const MOVEMENT_DAMPING = 1400;
 
@@ -59,7 +59,7 @@ export function Globe({
   config?: COBEOptions;
 }) {
   const { theme } = useTheme();
-  const isDarkMode = theme === "dark";
+  const isDarkMode = theme === 'dark';
 
   const phiRef = useRef(0);
   const widthRef = useRef(0);
@@ -90,7 +90,7 @@ export function Globe({
   const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value;
     if (canvasRef.current) {
-      canvasRef.current.style.cursor = value !== null ? "grabbing" : "grab";
+      canvasRef.current.style.cursor = value !== null ? 'grabbing' : 'grab';
     }
   };
 
@@ -109,14 +109,14 @@ export function Globe({
       }
     };
 
-    window.addEventListener("resize", onResize);
+    window.addEventListener('resize', onResize);
     onResize();
 
     const globe = createGlobe(canvasRef.current!, {
       ...finalConfig,
       width: widthRef.current * 2,
       height: widthRef.current * 2,
-      onRender: (state) => {
+      onRender: state => {
         if (!pointerInteracting.current) phiRef.current += 0.005;
         state.phi = phiRef.current + rs.get();
         state.width = widthRef.current * 2;
@@ -124,35 +124,33 @@ export function Globe({
       },
     });
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"), 0);
+    setTimeout(() => (canvasRef.current!.style.opacity = '1'), 0);
     return () => {
       globe.destroy();
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener('resize', onResize);
     };
   }, [rs, finalConfig]);
 
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        'absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]',
         className
       )}
     >
       <canvas
         className={cn(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+          'size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]'
         )}
         ref={canvasRef}
-        onPointerDown={(e) => {
+        onPointerDown={e => {
           pointerInteracting.current = e.clientX;
           updatePointerInteraction(e.clientX);
         }}
         onPointerUp={() => updatePointerInteraction(null)}
         onPointerOut={() => updatePointerInteraction(null)}
-        onMouseMove={(e) => updateMovement(e.clientX)}
-        onTouchMove={(e) =>
-          e.touches[0] && updateMovement(e.touches[0].clientX)
-        }
+        onMouseMove={e => updateMovement(e.clientX)}
+        onTouchMove={e => e.touches[0] && updateMovement(e.touches[0].clientX)}
       />
     </div>
   );

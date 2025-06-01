@@ -1,0 +1,16 @@
+{
+  "name": "midnight-magnoliasc",
+  "version": "1.0.0",
+  "description": "Midnight Magnolia SC business application",
+  "private": true,
+  "scripts": {
+    "dev": "cd midnight-magnolia/midnight-magnolia && npm run dev",
+    "build": "cd midnight-magnolia/midnight-magnolia && npm ci && npm run build",
+    "start": "cd midnight-magnolia/midnight-magnolia && npm start",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

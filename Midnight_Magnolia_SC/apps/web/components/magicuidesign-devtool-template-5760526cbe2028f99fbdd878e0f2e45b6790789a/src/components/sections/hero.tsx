@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { AuroraText } from "@/components/aurora-text";
-import { Icons } from "@/components/icons";
-import { Section } from "@/components/section";
-import { buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { AuroraText } from '@/components/aurora-text';
+import { Icons } from '@/components/icons';
+import { Section } from '@/components/section';
+import { buttonVariants } from '@/components/ui/button';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { lazy, Suspense, useEffect, useState } from 'react';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -49,8 +49,8 @@ function HeroTitles() {
     <div className="flex w-full max-w-3xl flex-col overflow-hidden pt-8">
       <motion.h1
         className="text-left text-4xl font-semibold leading-tighter text-foreground sm:text-5xl md:text-6xl tracking-tighter"
-        initial={{ filter: "blur(10px)", opacity: 0, y: 50 }}
-        animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+        initial={{ filter: 'blur(10px)', opacity: 0, y: 50 }}
+        animate={{ filter: 'blur(0px)', opacity: 1, y: 0 }}
         transition={{
           duration: 1,
           ease,
@@ -100,8 +100,8 @@ function HeroCTA() {
         <Link
           href="/download"
           className={cn(
-            buttonVariants({ variant: "default" }),
-            "w-full sm:w-auto text-background flex gap-2 rounded-lg"
+            buttonVariants({ variant: 'default' }),
+            'w-full sm:w-auto text-background flex gap-2 rounded-lg'
           )}
         >
           <Icons.logo className="h-6 w-6" />
@@ -119,7 +119,7 @@ function HeroCTA() {
     </div>
   );
 }
-const LazySpline = lazy(() => import("@splinetool/react-spline"));
+const LazySpline = lazy(() => import('@splinetool/react-spline'));
 
 export function Hero() {
   const [showSpline, setShowSpline] = useState(false);
@@ -131,9 +131,9 @@ export function Hero() {
     };
 
     checkMobile();
-    window.addEventListener("resize", checkMobile);
+    window.addEventListener('resize', checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   useEffect(() => {

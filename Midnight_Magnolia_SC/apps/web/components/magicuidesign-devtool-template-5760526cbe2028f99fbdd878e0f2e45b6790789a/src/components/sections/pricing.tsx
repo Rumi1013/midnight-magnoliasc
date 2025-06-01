@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { Section } from "@/components/section";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { siteConfig } from "@/lib/config";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import { Check } from "lucide-react";
-import { useState } from "react";
+import { Section } from '@/components/section';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { siteConfig } from '@/lib/config';
+import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
+import { useState } from 'react';
 
 interface TabsProps {
   activeTab: string;
-  setActiveTab: (tab: "yearly" | "monthly") => void;
+  setActiveTab: (tab: 'yearly' | 'monthly') => void;
   className?: string;
   children: (activeTab: string) => React.ReactNode;
 }
@@ -32,7 +32,7 @@ const Tabs = ({ activeTab, setActiveTab, className, children }: TabsProps) => {
   return (
     <div
       className={cn(
-        "mx-auto flex w-full items-center justify-center",
+        'mx-auto flex w-full items-center justify-center',
         className
       )}
     >
@@ -58,7 +58,7 @@ const TabsTrigger = ({
   return (
     <button
       onClick={onClick}
-      className={cn("relative z-[1] px-4 py-2", { "z-0": isActive })}
+      className={cn('relative z-[1] px-4 py-2', { 'z-0': isActive })}
     >
       {isActive && (
         <motion.div
@@ -66,7 +66,7 @@ const TabsTrigger = ({
           className="absolute inset-0 rounded-full bg-accent"
           transition={{
             duration: 0.2,
-            type: "spring",
+            type: 'spring',
             stiffness: 300,
             damping: 25,
             velocity: 2,
@@ -75,8 +75,8 @@ const TabsTrigger = ({
       )}
       <span
         className={cn(
-          "relative block text-sm font-medium duration-200",
-          isActive ? "delay-100 text-primary" : ""
+          'relative block text-sm font-medium duration-200',
+          isActive ? 'delay-100 text-primary' : ''
         )}
       >
         {children}
@@ -90,13 +90,13 @@ function PricingTier({
   billingCycle,
 }: {
   tier: (typeof siteConfig.pricing)[0];
-  billingCycle: "monthly" | "yearly";
+  billingCycle: 'monthly' | 'yearly';
 }) {
   return (
     <div
       className={cn(
-        "outline-focus transition-transform-background relative z-10 box-border grid h-full w-full overflow-hidden text-foreground motion-reduce:transition-none lg:border-r border-t last:border-r-0",
-        tier.popular ? "bg-primary/5" : "text-foreground"
+        'outline-focus transition-transform-background relative z-10 box-border grid h-full w-full overflow-hidden text-foreground motion-reduce:transition-none lg:border-r border-t last:border-r-0',
+        tier.popular ? 'bg-primary/5' : 'text-foreground'
       )}
     >
       <div className="flex flex-col h-full">
@@ -119,10 +119,10 @@ function PricingTier({
               key={tier.price[billingCycle]}
               initial={{
                 opacity: 0,
-                x: billingCycle === "yearly" ? -10 : 10,
-                filter: "blur(5px)",
+                x: billingCycle === 'yearly' ? -10 : 10,
+                filter: 'blur(5px)',
               }}
-              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
               transition={{
                 duration: 0.25,
                 ease: [0.4, 0, 0.2, 1],
@@ -153,10 +153,10 @@ function PricingTier({
         <Button
           size="lg"
           className={cn(
-            "w-full rounded-none shadow-none",
+            'w-full rounded-none shadow-none',
             tier.popular
-              ? "bg-primary text-primary-foreground hover:bg-secondary-foreground"
-              : "bg-muted text-foreground hover:bg-muted/80"
+              ? 'bg-primary text-primary-foreground hover:bg-secondary-foreground'
+              : 'bg-muted text-foreground hover:bg-muted/80'
           )}
         >
           {tier.cta}
@@ -167,11 +167,11 @@ function PricingTier({
 }
 
 export function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
-    "yearly"
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'yearly'
   );
 
-  const handleTabChange = (tab: "yearly" | "monthly") => {
+  const handleTabChange = (tab: 'yearly' | 'monthly') => {
     setBillingCycle(tab);
   };
 
@@ -195,17 +195,17 @@ export function Pricing() {
             setActiveTab={handleTabChange}
             className="mx-auto w-full max-w-md"
           >
-            {(activeTab) => (
+            {activeTab => (
               <TabsList>
-                {["yearly", "monthly"].map((tab) => (
+                {['yearly', 'monthly'].map(tab => (
                   <TabsTrigger
                     key={tab}
                     value={tab}
-                    onClick={() => handleTabChange(tab as "yearly" | "monthly")}
+                    onClick={() => handleTabChange(tab as 'yearly' | 'monthly')}
                     isActive={activeTab === tab}
                   >
                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                    {tab === "yearly" && (
+                    {tab === 'yearly' && (
                       <span className="ml-2 text-xs font-semibold text-green-500">
                         Save 25%
                       </span>
